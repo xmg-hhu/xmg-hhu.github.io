@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 title: Examples
 parent: Documentation
 permalink: /documentation/examples

@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 title: Principles and plugins
 parent: Documentation
 permalink: /documentation/principles-and-plugins

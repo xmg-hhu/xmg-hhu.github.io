@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 title: Bibliography
 parent: Documentation
 permalink: /documentation/bibliography

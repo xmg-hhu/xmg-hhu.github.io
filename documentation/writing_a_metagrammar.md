@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 title: Writing a Metagrammar
 parent: Documentation
 permalink: /documentation/writing_a_metagrammar

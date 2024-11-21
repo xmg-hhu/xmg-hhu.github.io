@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 title: Errors and support
 parent: Documentation
 permalink: /documentation/errors-and-support

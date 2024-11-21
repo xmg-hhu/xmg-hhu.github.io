@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 title: Bricks, contributions and commands
 parent: Documentation
 permalink: /documentation/bricks-contributions-and-commands

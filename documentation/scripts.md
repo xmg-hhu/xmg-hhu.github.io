@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 title: Scripts
 parent: Documentation
 permalink: /documentation/scripts

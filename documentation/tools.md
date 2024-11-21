@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 title: Tools
 parent: Documentation
 permalink: /documentation/tools
