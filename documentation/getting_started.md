@@ -18,13 +18,13 @@ if you are using a Debian based distribution (like Ubuntu), open a terminal and 
 
 ###  Git:
 
-![alt text](https://raw.githubusercontent.com/spetitjean/XMG-2/master/Doc/images/git.png)
+![alt text]({{ site.url }}/docs/assets/git.png)
 
     sudo apt-get install git
 
 ### Download and install Gecode (4.0 and latest not supported yet):
 
-![alt text](https://raw.githubusercontent.com/spetitjean/XMG-2/master/Doc/images/gecode.png)
+![alt text]({{ site.url }}/docs/assets/gecode.png)
 
 From here: [Gecode](http://www.gecode.org/download.html) (recommended: [Gecode 3.7.3](https://github.com/Gecode/gecode/releases/tag/release-3.7.3), also available here: [Gecode 3.7.3](https://drive.google.com/uc?export=download&id=0B2gwCa-ajJXmOUd0VHBZYnNTZ2c)).
 
@@ -63,7 +63,7 @@ For dependencies:
     apt-get install libgmp3-dev
 ### Install Python3 (>3.2):
 
-![alt text](https://raw.githubusercontent.com/spetitjean/XMG-2/master/Doc/images/python.png)
+![alt text]({{ site.url }}/docs/assets/python.png)
 
     sudo apt-get install python3 python3-yaml python3-pyqt4
 
