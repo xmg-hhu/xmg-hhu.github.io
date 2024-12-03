@@ -39,7 +39,7 @@ Once you defined the nodes of the tree fragment, you can describe how they are r
 
 Each subformula you define can be added conjunctively (using ";") or disjunctively (using "|") to the description. For instance, the fragment:
 
-![alt text](https://raw.githubusercontent.com/spetitjean/XMG-2/master/Doc/images/tree.png)
+![alt text]({{ site.url }}/docs/assets/tree.png)
 
 
 can be represented by the following code in XMG:
@@ -135,7 +135,7 @@ The `<frame>` dimension can be used in a compiler by using the **frame** brick (
 
 This dimension allows to describe typed feature structures. These structures use conjunctive types, which means that types are not atomic, but rather sets of elementary types. When two typed feature structures get unified, the type of the resulting structure is determined by a type hierarchy. In the simple case, and if the types are compatible, the resulting type is the union of both types. 
 
-![alt text](https://raw.githubusercontent.com/spetitjean/XMG-2/master/Doc/images/hierarchy.png)
+![alt text]({{ site.url }}/docs/assets/hierarchy.png)
 
 Type hierarchies are defined in two steps. First, the declaration of the atomic types:
 
@@ -193,8 +193,8 @@ Semantic descriptions with frames can as well include relations between unificat
 
 where `r1...rn` are relation identifiers,`a11,...,a1y` are the types of the y arguments of `r1`, and `an1...anx` are the types of the x arguments of `rn`.
 
+![alt text]({{ site.url }}/docs/assets/frames.png)
 
-![alt text](https://raw.githubusercontent.com/spetitjean/XMG-2/master/Doc/images/frames.png)
 
 In the frame dimension, frames are described in a very similar way to untyped feature structures. The type of the frame and the attribute-value pairs are given between square brackets, and separated by commas. Pairs are separated by a colon. For example, the  first frame in the example above can be encoded in the following way:
 

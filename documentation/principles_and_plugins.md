@@ -31,7 +31,7 @@ The **colors** principle consists in the use of a color language to semi-automat
 Duchier, 04]]]). The process is the following: 
  1.  we decorate nodes with colors (red, black or white),
  2.   the description solving is extended so that the nodes are unified according to specific color combination rules:
-![alt text](https://raw.githubusercontent.com/spetitjean/XMG-2/master/Doc/images/colors.png)
+![alt text]({{ site.url }}/docs/assets/colors.png)
 
 That is to say: 
 a black node may be unified with 0, 1 or more white nodes and thus produces a black node, 

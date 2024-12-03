@@ -40,7 +40,7 @@ The metagrammatical rule we will use is the following:
 So we will handle 4 tree fragments: Active, CanSubject, Object, and RelSubject. The class transitive will consist of an abstraction on a conjunctive combination including a disjunction on the subject that is used.
 The Active class corresponds to the verbal spine: 
 
-![alt text](https://raw.githubusercontent.com/spetitjean/XMG-2/master/Doc/images/active.png)
+![alt text]({{ site.url }}/docs/assets/active.png)
 
     class Active
     export ?X ?Y
@@ -52,7 +52,7 @@ The Active class corresponds to the verbal spine:
 
 The CanSubject class corresponds to the Example class introduced previously:
 
-![alt text](https://raw.githubusercontent.com/spetitjean/XMG-2/master/Doc/images/cansubj.png)
+![alt text]({{ site.url }}/docs/assets/cansubj.png)
 
     class CanSubject
     export ?X ?Y ?Z
@@ -67,7 +67,7 @@ The CanSubject class corresponds to the Example class introduced previously:
 
 The Object class is the symetric class of CanSubject:
 
-![alt text](https://raw.githubusercontent.com/spetitjean/XMG-2/master/Doc/images/obj.png)
+![alt text]({{ site.url }}/docs/assets/obj.png)
 
 
     class Object
@@ -83,7 +83,7 @@ The Object class is the symetric class of CanSubject:
 
 The RelSubject class and its concrete syntax are given below:
 
-![alt text](https://raw.githubusercontent.com/spetitjean/XMG-2/master/Doc/images/relsubj.png)
+![alt text]({{ site.url }}/docs/assets/relsubj.png)
 
     class RelSubject
     export ?X ?Y ?Z
@@ -126,9 +126,9 @@ trees. So we ask for its evaluation by invoking:
 As a result we obtain the 2 following trees (the first one represents the relative subject, and the second
 one the canonical subject) :
 
-![alt text](https://raw.githubusercontent.com/spetitjean/XMG-2/master/Doc/images/solution_1.png)
+![alt text]({{ site.url }}/docs/assets/solution_1.png)
     
-![alt text](https://raw.githubusercontent.com/spetitjean/XMG-2/master/Doc/images/solution_2.png)
+![alt text]({{ site.url }}/docs/assets/solution_2.png)
     
 ## The whole metagrammar
 
