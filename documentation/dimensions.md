@@ -37,10 +37,9 @@ Once you defined the nodes of the tree fragment, you can describe how they are r
 * `>>*` 	large precedence (transitive reflexive closure)
 * `=` 	node equation
 
-Each subformula you define can be added conjunctively (using ";") or disjunctively (using "|") to the description. For instance, the fragment:
+Each subformula you define can be added conjunctively (using ";") or disjunctively (using "\|") to the description. For instance, the fragment
 
 ![alt text]({{ site.url }}/docs/assets/tree.png)
-
 
 can be represented by the following code in XMG:
 
@@ -51,6 +50,7 @@ can be represented by the following code in XMG:
         ?X -> ?Y ; ?X -> ?Z ; ?Y >> ?Z
       }
     }
+    
 XMG also supports an alternative way of specifiyng how the nodes are related to each other. This alternative syntax should allow the user to both define the nodes and give their relations at the same time:
 
 * node { node } 	strict dominance
@@ -123,7 +123,7 @@ The interface can also be accessed as a regular dimension, meaning that the `*=`
                         node ?Z [cat=V]
                        }
        };
-   <iface>{[subj = ?Y]}
+    <iface>{[subj = ?Y]}
     } 
     
 
@@ -242,7 +242,9 @@ describe:
 *  and semantic identifiers.
 
 So the language of the semantic dimension is:
+
     Description ::= l:p(E_1,...,E_n) | ~ l:p(E_1,...,E_n) | E_i << E_j | E 
+
 In XMG concrete syntax, one may define a class with a semantic content by: 
 
     class BinaryRel
