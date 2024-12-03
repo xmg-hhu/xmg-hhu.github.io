@@ -17,7 +17,7 @@ This section lists some errors that can be encountered while developing a resour
 *  `unrecognized`: the given symbol is not supported by the tokenizer. You may check the encoding of the file or try to use the `--latin` option.
 ### Syntax errors
 
-*  `expected`: syntax error. Check the different languages of the section [Dimensions](http://dokufarm.phil.hhu.de/xmg/doku.php?id=start#dimensions). Maybe the used compiler is not the right one?
+*  `expected`: syntax error. Check the different languages of the section [Dimensions]({% link documentation/dimensions.md %}). Maybe the used compiler is not the right one?
 ### Type errors
 
 *  `incompatible types`: the value of an attribute does not have the expected type. Check the type declarations.
@@ -49,7 +49,7 @@ This section lists some errors that can be encountered while developing a resour
 
 *  `cycle detected with class`: the given class creates a cycle in the class hierarchies (it calls a class which is already one of its ancestors in the hierarchy).  This is forbidden as the resource generated would be infinite.
 
-*  `no class set to be valued`: there should be at least one axiom in a metagrammar (see [Valuations](http://dokufarm.phil.hhu.de/xmg/doku.php?id=start#valuations)).
+*  `no class set to be valued`: there should be at least one axiom in a metagrammar (see [Valuations]({% link documentation/writing_a_metagrammar.md %}#valuations)).
 
 
 ## Other common problems
