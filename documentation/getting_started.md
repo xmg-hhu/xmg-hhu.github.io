@@ -92,10 +92,9 @@ Use [VirtualBox](https://www.virtualbox.org/) and download one of the XMG virtua
 
 *  [Xubuntu 18.04 virtual image](https://www.dropbox.com/s/knkg4qtfld3ir4g/XMG-Xubuntu-18.04.ova?dl=1): lighter version, includes the parser TuLiPA-frames (default password is xmg) - last updated 30/05/2018.
 
-##  Using XMG without installing anything
+## Option 3: using Docker
 
-An online compiler is available at this address: [http://xmg.phil.hhu.de/index.php/upload/workbench](http://xmg.phil.hhu.de/index.php/upload/workbench).
-
+Coming soon
 
 # Updating XMG-2
 
@@ -104,7 +103,7 @@ To get the latest version of XMG-2, regardless of the installation option you ch
     git pull
 #  Creating a first compiler
 
-The instructions detailed here is equivalent to using the script **reinstall.sh** (see page [Scripts](https://github.com/spetitjean/XMG-2/wiki/7:-Scripts)). This means that you can skip this section by only typing:
+The instructions detailed here is equivalent to using the script **reinstall.sh** (see page [Scripts](/documentation/scripts)). This means that you can skip this section by only typing:
 
     ./reinstall.sh
     (at the root of the XMG-2 installation directory)

@@ -20,7 +20,9 @@ The command `fstat` compares the numbers of models for each class contained in t
 
 Grammars generated with XMG can be viewed using the default GUI packaged with XMG, as showed in the introduction. Other options are available to visualize the generated resource, each of them offering support for different types of grammars:
 
-##  The XMG webGUI
+##  The XMG WebGUI
+<span style="color:red">The XMG WebGUI is not available online anymore. It will be distributed soon as a Docker container.</span>
+
 An online tool allows to visualize LTAG grammars with semantic frames: [http://xmg.phil.hhu.de/index.php/upload/upload_viewer](http://xmg.phil.hhu.de/index.php/upload/upload_viewer).
 The viewer is optimized for Google Chrome. It was tested under Mozilla Firefox, but performance issues appear as the trees grow. The variable highlighting on click is only available on Chrome.  
 Please report any bug related to the GUI on the [GitHub tracker](https://github.com/xmg-hhu/xmg-webgui).

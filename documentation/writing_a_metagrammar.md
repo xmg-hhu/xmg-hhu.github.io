@@ -8,20 +8,17 @@ nav_order: 2
 
 ---
 
-This section gives the general shape of a Metagrammar. The resource itself is described with domain specific languages (depending on the type of resource) which are provided by XMG dimensions. The different description languages available will be presented in the section [Dimensions](https://github.com/spetitjean/XMG-2/wiki/3:-Dimensions).
+This section gives the general shape of a Metagrammar. The resource itself is described with domain specific languages (depending on the type of resource) which are provided by XMG dimensions. The different description languages available will be presented in the section [Dimensions](/documentation/dimensions).
 
 # Choosing a compiler
 
-The first decision which needs to be made is the choice of the compiler. This decision depends on the type of linguistic resource to describe. Each compiler was created for a specific grammar engineering task, and features a set of dimensions. This means that each compiler comes with its own language. The list of available dimensions is given in the next section ([Dimensions](https://github.com/spetitjean/XMG-2/wiki/3:-Dimensions)),  and a list of existing compilers using these dimensions is given in the section [Bricks, contributions and commands](https://github.com/spetitjean/XMG-2/wiki/6:-Bricks,-contributions-and-commands). 
+The first decision which needs to be made is the choice of the compiler. This decision depends on the type of linguistic resource to describe. Each compiler was created for a specific grammar engineering task, and features a set of dimensions. This means that each compiler comes with its own language. The list of available dimensions is given in the next section ([Dimensions](/documentation/dimensions)),  and a list of existing compilers using these dimensions is given in the section [Bricks, contributions and commands](/documentation/bricks-contributions-and-commands). 
 # Getting started
 
 A metagrammar is composed of one or several text files, which are usually using the prefix ''.mg'' or ''.xmg''. Any text editor can be used to write XMG code, although [Emacs](https://www.gnu.org/software/emacs/) is recommended because of the different XMG modes created for it:
 * the [emacs](https://sourcesup.cru.fr/xmg/xmg.el) and [vim](https://sourcesup.cru.fr/xmg/xmg.vim) modes for XMG-1 (only tree descriptions and predicate semantics).
 *  new emacs modes inspired from this one, which are automatically generated when a compiler is built (in the file .install/yap/xmg/compiler/X/generated/emacs_mode, where X is the name of the compiler).
 * a more advanced emacs mode for tree descriptions and frame semantics: [https://github.com/xmg-hhu/xmg-mode](https://github.com/xmg-hhu/xmg-mode)
-
-The XMG online compiler also provides an online interactive editor: [http://xmg.phil.hhu.de/index.php/upload/workbench](http://xmg.phil.hhu.de/index.php/upload/workbench). 
-
 
 # Including data from other files
 
@@ -154,12 +151,13 @@ Once the identifiers have been declared and their scope defined, we can start de
 * a statement
 * a conjunction of statements represented by `S1 ; S2` in the XMG formalism
 * a disjunction of statements represented by `S1 | S2`
-* a statement associated to an interface (see [Interface](https://github.com/spetitjean/XMG-2/wiki/3:-Dimensions#iface-connecting-dimensions)) 
+* a statement associated to an interface (see [Interface](/documentation/dimensions#iface-connecting-dimensions)) 
+
 By statement we mean:
 * an expression: E (that is a variable, a constant, an attribute-value matrix, a reference (by using a dot operator, see the example below), a disjunction of expressions, or an atomic disjunction of constant values such as `@{n,v,s}`),
 * a unification equation: `E1=E2`,
 * a class instanciation: `ClassId[]` (note that the square-brackets after the class id are mandatory even if the instantiated class has no parameter),
-* a description belonging to a dimension: this is where the main description task takes place (see section [Dimensions](https://github.com/spetitjean/XMG-2/wiki/3:-Dimensions))
+* a description belonging to a dimension: this is where the main description task takes place (see section [Dimensions](/documentation/dimensions))
 
 # Mutexes
 

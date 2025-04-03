@@ -25,12 +25,14 @@ but more principles can also be added as **plugins**. This is what led to the cr
 * **precedes**: two properties are given as parameters. A node with the first property must precede one with the second property
 * **requires**: two properties are given as parameters. If a node with the first property exists, then a node with the second property must also exist.
 * **excludes**: two properties are given as parameters. If a node with the first property exists, then no node with the second property can exist.
+
 ## Colors
 
 The **colors** principle consists in the use of a color language to semi-automatize node unification during tree description solving. This idea has been proposed by B. Crabbé (see [[https://link.springer.com/chapter/10.1007/11424574_3|[Crabbé and
 Duchier, 04]]]). The process is the following: 
  1.  we decorate nodes with colors (red, black or white),
  2.   the description solving is extended so that the nodes are unified according to specific color combination rules:
+ 
 ![alt text]({{ site.url }}/docs/assets/colors.png)
 
 That is to say: 
@@ -57,6 +59,7 @@ To use the **colors** principle, the metagrammar must include the following decl
 When the principle is used, every node needs to be affected a color (or to be unified with a node having one). As a reminder, giving such a property to a node is done as follows:
 
     node ?X (color=red)
+    
 ## Rank
 
 The **rank** principle is used to express linear orders between nodes which do not appear in the same classes. For example, in languages where there are strict constraints on the order of clitic pronouns, this principle makes the description task easier. The idea is to give a **rank** to every node representing a clitic, and this rank will make sure that if other clitics are added to the description (with their own ranks), they will be placed on the right side of this clitic. In a description where two nodes have respectively ranks 3 and 4, the only valid solutions will be the ones where the node with rank 3 precedes (not necessarily immediately) the one with rank 4.
