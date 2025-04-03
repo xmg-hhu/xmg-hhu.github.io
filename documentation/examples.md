@@ -196,5 +196,5 @@ one the canonical subject) :
     
 #  More examples
 
-More examples can be found in the `Metagrammars` folder of the XMG installation directory. Some grammars are also available on the [resources](http://xmg.phil.hhu.de/index.php/upload/resources) page of the XMG website.
+More examples can be found in the `Metagrammars` folder of the XMG installation directory. Some grammars are also available on the [resources](/resources) page.
 
