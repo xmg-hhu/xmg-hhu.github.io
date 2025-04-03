@@ -22,9 +22,12 @@ The dimensions documented here are:
 
 The `<syn>` dimension allows to describe trees, initially to create Tree Adjoining Grammars or Interaction Grammars. To use this language, you can either build a new compiler using the brick **syn** (contribution **treemg**) or use one of the existing compilers including the dimension: **synsem** (contribution **synsemCompiler**, with predicate based semantics) or **synframe** (contribution **synframeCompiler**, with frame based semantics).
 
-A syntactic description is given following the pattern `<syn>{ formulas }`. Now what kind of formulas does a syntactic description contain ? The answer is nodes. These nodes are in relation with each other. In XMG, you may give a name to a node by using a variable, and also associate properties and/or features with it. The classic node definition is `node ?id ( prop1=val1 , ... , propN=valN ) [ feat1=val1 , ... , featN=valN ]` such as in:
+A syntactic description is given following the pattern `<syn>{ formulas }`. Now what kind of formulas does a syntactic description contain ? The answer is nodes. These nodes are in relation with each other. In XMG, you may give a name to a node by using a variable, and also associate properties and/or features with it.
+
+The classic node definition is `node ?id ( prop1=val1 , ... , propN=valN ) [ feat1=val1 , ... , featN=valN ]` such as in:
 
     node ?Y (gf=subj)[cat=n]
+
 Here we have a node that we refer to by using the ?Y variable. This node has the property gf (grammatical function) associated with the value subj, and the feature structure [cat=n] (note that associating a variable to a node is optional).
 
 Once you defined the nodes of the tree fragment, you can describe how they are related to each other. To do this, you have the following operators:

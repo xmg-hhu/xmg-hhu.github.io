@@ -49,6 +49,7 @@ If the installation fails, there is probably a dependency missing. To install th
 
     sudo apt-get install g++    
     sudo apt-get install make
+
 ###  Download and install YAP (Yet Another Prolog):
 
     git clone https://github.com/spetitjean/yap-6.3.git
@@ -61,6 +62,7 @@ Then:
 For dependencies: 
 
     apt-get install libgmp3-dev
+
 ### Install Python3 (>3.2):
 
 ![alt text]({{ site.url }}/docs/assets/python.png)
@@ -69,14 +71,16 @@ For dependencies:
 
 ### Download XMG:
 
-    git clone https://github.com/spetitjean/XMG-2.git    
+    git clone https://github.com/spetitjean/XMG-2.git
+    
 You can also get it as an archive here: [XMG-2](https://drive.google.com/uc?export=download&id=0B2gwCa-ajJXmRmNfU1FvRFpwOGM) (this solution will not allow you to update XMG-2).
 
 ### Add XMG-2 to your PATH
 
 Edit your `~/.bashrc` file and add this line (your path_to_xmg should be for example `~/XMG-2`):
 
-    export PATH=path_to_xmg:$PATH    
+    export PATH=path_to_xmg:$PATH
+    
 To edit the `bashrc` file, you can type:
 
     emacs ~/.bashrc
@@ -101,12 +105,14 @@ Coming soon
 To get the latest version of XMG-2, regardless of the installation option you chose, you can type this command (from the XMG-2 directory):
     
     git pull
+
 #  Creating a first compiler
 
 The instructions detailed here is equivalent to using the script **reinstall.sh** (see page [Scripts](/documentation/scripts)). This means that you can skip this section by only typing:
 
     ./reinstall.sh
-    (at the root of the XMG-2 installation directory)
+    
+(at the root of the XMG-2 installation directory)
 
 Before compiling a metagrammar, a compiler needs to be created. XMG-2 assembles compilers by combining compiler fragments called bricks. These bricks are distributed into packages called contributions. For example: 
 
@@ -140,7 +146,9 @@ After these operations, the compiler synsem (Tree Adjoining Grammar with semanti
 The XMG system includes a toy metagrammars that we highly recommend to manipulate. The files containing these metagrammars should be in the Metagrammars directory of the XMG installation. To compile one of the synsem examples (adapted to the compiler we just built), just type:
 
     xmg compile synsem MetaGrammars/synsem/TagExample.mg
+
 (see also List of XMG's options below)
+
 The result of this compilation will be a file named TagExample.xml.
 
 To launch the GUI, type:

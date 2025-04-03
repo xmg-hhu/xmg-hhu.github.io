@@ -33,7 +33,8 @@ To ease their development and reuse Metagrammars can be written in separated fil
 The first piece of information one has to give in a metagrammar is the principles that will be needed to compute the grammar structures. The instruction used to do this is the `use principle with (constraints) dims (dimensions)` statement. For instance, one may decide to force the syntactic structures of the output grammar to have the grammatical function `gf` with the value `subj` only once. This is told by:
 
     use unicity with (gf = subj) dims (syn)
-In the syn dimension, we use the unicity principle on the attribute-value ''gf = subj''. The description of the unicity principle, together with all information about principles and how to use/create them, can be found in the section [Principles and plugins](https://github.com/spetitjean/XMG-2/wiki/3:-Dimensions).
+
+In the syn dimension, we use the unicity principle on the attribute-value ''gf = subj''. The description of the unicity principle, together with all information about principles and how to use/create them, can be found in the section [Principles and plugins](principles-and-plugins).
 
 Note that principles use as parameters pieces of information that are associated to nodes with the status property (see below). 
 
@@ -44,7 +45,8 @@ Every piece of information in a XMG metagrammar is typed. This is of course the 
 * as an enumerated type, using the syntax `type Id = {Val1,...,ValN}` such as in: 
 
         type CAT={n,v,p}     
-(note that the values associated to a type are constants)
+
+Note that the values associated to a type are constants.
 
 * as an integer interval, using the syntax `type Id = [I1 .. I2]` such as in: 
 
@@ -70,8 +72,9 @@ Once types have been defined, we can define typed properties that will be associ
  1.   to provide specific information to the compiler so that additional treatments can be done on the output structures to ensure their well-formedness or 
  2.   to decorate nodes with a label that is linked to the target formalism and that will appear in the output (see XMG's graphical output). The syntax used to define properties is ''property Id : Type'', such as in:
 
-    property extraction : bool    
-A set of properties is specific to principles: it is the case for the properties **color** and **rank**. This means that when using these principles, these properties must be declared. See the section [Principles and plugins](https://github.com/spetitjean/XMG-2/wiki/4:-Principles-and-plugins) for more information about how to use these properties.
+    property extraction : bool
+    
+A set of properties is specific to principles: it is the case for the properties **color** and **rank**. This means that when using these principles, these properties must be declared. See the section [Principles and plugins](principles-and-plugins) for more information about how to use these properties.
 
 Properties can also be used to give a "global" name to a node, thanks to the **name** property. To perform interfacing with the lexicon, one may want to give global names to some specific nodes, in order to be able to refer to these nodes in the lexicon. Such an interfacing can be used for instance
 to manage semantic information. To associate global names that will appear in the semi-automatically
@@ -95,12 +98,14 @@ N.B.: make sure these name properties will not cause node unification failures, 
 names to nodes that will be merged. At the end, the node names are visible in the output file (as an attribute of the node element):
 
     <node type="subst" name="objNode">
+
 ##  Features
 
  
 Eventually we have to define typed features that are associated to nodes in several syntactic formalisms such as Feature-Based Tree Adjoining Grammars (FBTAG) or Interaction Grammars (IG). The definition of a feature is done by writing `feature Id : Type`, such as in:
 
     feature num : NUMBER
+
 Up to now, we have seen the declarations that are needed by the compiler to perform different tasks (syntax checking, output processing, etc). Next we will see the heart of the metagrammar: the definition of the clauses, ie the classes. 
 
 # Classes
@@ -116,7 +121,8 @@ N.B. A class may be parametrized, in that case the parameters are between square
 To reach a better factorization, a class can inherit from another one. This is done by invoking `import Id` (where Id is a class name), such as in:
 
     import TopClass[]
-That is to say, the metagrammar corresponds to an inheritance hierarchy. But what does inherit mean here ? In fact, the content of the imported class is made available to the daughter class. More precisely, a class uses identifiers to refer to specific pieces of information. When a class inherits from another one, it can reuse the identifiers of its mother class (provided they have been exported, see below). Thus, some node can be specialized by adding new features and so on.
+
+That is to say, the metagrammar corresponds to an inheritance hierarchy. But what does inherit mean here? In fact, the content of the imported class is made available to the daughter class. More precisely, a class uses identifiers to refer to specific pieces of information. When a class inherits from another one, it can reuse the identifiers of its mother class (provided they have been exported, see below). Thus, some node can be specialized by adding new features and so on.
 
 Note that XMG allows multiple inheritance, and besides it offers an extended control of the scope of the inherited identifiers, since one can restrict the import to specific identifiers, and also rename imported identifiers. Restriction is done by using the keyword `as`:
 
@@ -140,6 +146,7 @@ As we just saw, we use identifiers in each class. One important point when defin
 In XMG, identifiers can refer either to a node, the value of a node property, or the value of a node feature. But whatever an identifier refers to, it must have been declared before by typing `declare id1 id2 ... idn`, such as in:
 
     declare ?X ?Y ?Z
+
 Note that in the declare section the prefix `?` (for variables) and `!` (for skolem constants) are mandatory. 
 
 
@@ -151,7 +158,7 @@ Once the identifiers have been declared and their scope defined, we can start de
 * a statement
 * a conjunction of statements represented by `S1 ; S2` in the XMG formalism
 * a disjunction of statements represented by `S1 | S2`
-* a statement associated to an interface (see [Interface](/documentation/dimensions#iface-connecting-dimensions)) 
+* a statement associated to an interface (see [Interface](dimensions#iface-connecting-dimensions)) 
 
 By statement we mean:
 * an expression: E (that is a variable, a constant, an attribute-value matrix, a reference (by using a dot operator, see the example below), a disjunction of expressions, or an atomic disjunction of constant values such as `@{n,v,s}`),
@@ -169,6 +176,7 @@ Then classes need to be added to this set by invoking `mutex Id += ClassId` such
 
     mutex SUBJ-INV += CanonicalObject
     mutex SUBJ-INV += InvertedNominalSubject
+
 Here we specify that we cannot use in the same description both the `CanonicalObject` and the `InvertedNominalSubject` classes.
 
 Note that in the metagrammar file, the mutex definitions have to be placed after the type, property and feature declarations and before the valuations. This means that they can appear just before class definitions, between them, or right after.

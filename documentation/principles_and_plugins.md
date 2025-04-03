@@ -28,8 +28,7 @@ but more principles can also be added as **plugins**. This is what led to the cr
 
 ## Colors
 
-The **colors** principle consists in the use of a color language to semi-automatize node unification during tree description solving. This idea has been proposed by B. Crabbé (see [[https://link.springer.com/chapter/10.1007/11424574_3|[Crabbé and
-Duchier, 04]]]). The process is the following: 
+The **colors** principle consists in the use of a color language to semi-automatize node unification during tree description solving. This idea has been proposed by B. Crabbé (see [[Crabbé and Duchier, 04]](https://link.springer.com/chapter/10.1007/11424574_3)). The process is the following: 
  1.  we decorate nodes with colors (red, black or white),
  2.   the description solving is extended so that the nodes are unified according to specific color combination rules:
  
