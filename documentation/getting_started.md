@@ -59,6 +59,7 @@ Then:
     ./configure --without-readline --without-minisat
     make 
     make install   
+
 For dependencies: 
 
     apt-get install libgmp3-dev
@@ -98,7 +99,31 @@ Use [VirtualBox](https://www.virtualbox.org/) and download one of the XMG virtua
 
 ## Option 3: using Docker
 
-Coming soon
+Install [Docker](https://www.docker.com/), and get the XMG container:
+
+    docker pull spetitjean/xmg-2
+
+To compile a metagrammar:
+
+    docker run -v <mg_folder>:/MG/test-mg -ti xmg-2 compile <compiler_name> /MG/test-mg/<mg_file>
+
+where
+
+*  `<mg_folder>` is the absolute path to the folder where the metagrammar file is located (it will be mounted in the container, which will write the output into it)
+*  `<compiler_name>` is the compiler which will be used to generate the output (for instance `synsem` or `synframe`)
+*  `<mg_file>` is the name of the file to be compiled
+
+To test the installation, you may try to compile this [toy metagrammar](https://github.com/spetitjean/XMG-2/raw/refs/heads/master/MetaGrammars/synframe/example.mg) (`synframe` compiler).
+
+To get the web-based tree viewer: 
+
+    docker pull spetitjean/xmg-viewer
+
+The viewer can be started by typing:
+
+    docker run -p 5000:5000 xmg-viewer
+
+Once running, you can access the viewer via a browser, at the address [http://localhost:5000](http://localhost:5000).
 
 # Updating XMG-2
 
