@@ -105,7 +105,7 @@ Install [Docker](https://www.docker.com/), and get the XMG container:
 
 To compile a metagrammar:
 
-    docker run -v <mg_folder>:/MG/test-mg -ti xmg-2 compile <compiler_name> /MG/test-mg/<mg_file>
+    docker run -v <mg_folder>:/MG/test-mg -ti spetitjean/xmg-2 compile <compiler_name> /MG/test-mg/<mg_file>
 
 where
 
@@ -121,7 +121,7 @@ To get the web-based tree viewer:
 
 The viewer can be started by typing:
 
-    docker run -p 5000:5000 xmg-viewer
+    docker run -p 5000:5000 spetitjean/xmg-viewer
 
 Once running, you can access the viewer via a browser, at the address [http://localhost:5000](http://localhost:5000).
 
